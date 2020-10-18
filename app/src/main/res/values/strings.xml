@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tezbus</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_travel">Поездки</string>
+    <string name="title_profile">Профиль</string>
+    <string name="travelTitle">Поиск поездок в Кыргызстане</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

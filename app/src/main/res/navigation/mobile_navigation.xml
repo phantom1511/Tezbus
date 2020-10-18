@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_travel">
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.dastan.tezbus.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_travel"
+        android:name="com.dastan.tezbus.ui.travel.TravelFragment"
+        android:label="@string/title_travel"
+        tools:layout="@layout/fragment_travel" >
+        <action
+            android:id="@+id/action_navigation_travel_to_travelResultFragment"
+            app:destination="@id/travelResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.dastan.tezbus.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/travelResultFragment"
+        android:name="com.dastan.tezbus.ui.travel.TravelResultFragment"
+        android:label="fragment_travel_result"
+        tools:layout="@layout/fragment_travel_result" >
+        <action
+            android:id="@+id/action_travelResultFragment_to_createTravelFragment"
+            app:destination="@id/createTravelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTravelFragment"
+        android:name="com.dastan.tezbus.ui.travel.CreateTravelFragment"
+        android:label="fragment_create_travel"
+        tools:layout="@layout/fragment_create_travel" >
+        <action
+            android:id="@+id/action_createTravelFragment_to_travelResultFragment"
+            app:destination="@id/travelResultFragment" />
+    </fragment>
+</navigation>
